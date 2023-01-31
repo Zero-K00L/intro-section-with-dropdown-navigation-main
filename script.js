@@ -3,6 +3,9 @@ const overlayAnim = document.querySelector('#overlay');
 const overlayAnim2 = document.querySelector('#overlay2');
 const fadeElems = document.querySelectorAll('.has-fade');
 const fadeElems2 = document.querySelectorAll('.has-fade2');
+const features = document.querySelector('.features');
+const submenu = document.querySelector('.features-submenu');
+const arrow1 = document.querySelector('.down-arrow1');
 
 btnHamburger.addEventListener('click', function(){
 
@@ -38,5 +41,12 @@ btnHamburger.addEventListener('click', function(){
 btnHamburger.addEventListener("click", function() {
     overlayAnim.classList.toggle("open");
     overlayAnim2.classList.toggle("open");
-  
+});
+
+
+// Reveals the submenu for Features
+
+features.addEventListener('click', function() {
+    arrow1.classList.toggle('active');
+    submenu.classList.toggle('show');
 });

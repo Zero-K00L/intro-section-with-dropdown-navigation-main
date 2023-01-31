@@ -185,6 +185,10 @@ transform: translateX(-100%);
     transition: all 200ms linear;
 }
 
+.down-arrow1.active {
+    transform: rotate(180deg);
+}
+
 .down-arrow2 {
     width: 10px;
     position: relative;
@@ -200,26 +204,55 @@ transform: translateX(-100%);
     width: 100%;
     max-width: 120px;
     height: 147px;
-    border: 1px solid black;
     position: relative;
-    top: -5px;
-    left: 50px;
+    top: -19px;
+    left: 49px;
+    list-style: none;
+    padding: 0;
+    display: none;
 }
 
-.todo-icon {
-    width: 18px;
+.features-submenu.show {
+    display: inline-block;
+}
+
+li {
+    display: inline-block;
+}
+
+ul > li:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+ul {
+    position: relative;
+    top: 2px;
+}
+
+.icon {
     margin-left: 1px;
+    width: 18px;
+    height: 20px;
+    position: relative;
+    top: -2px;
 }
 
-.active {
-    transform: rotate(180deg);   
+.icon-2 {
+    width: 20px;
 }
 
-div > a {
-    text-decoration: none;
+.icon-3 {
+    width: 17px;
+}
+
+
+.submenu-option {
+    width: 69%;
+    position: relative;
+    top: -7px;
+    left: 11px;
     color: var(--mediumGray);
 }
-
 
 
 
