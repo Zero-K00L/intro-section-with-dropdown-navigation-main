@@ -104,7 +104,6 @@ nav {
     margin-left: auto; 
     margin-right: 0;
     z-index: 1;
-    border: 1px solid black;
 }
 
 .overlay-2 {
@@ -181,9 +180,46 @@ transform: translateX(-100%);
     width: 10px;
     position: relative;
     top: -40px;
-    left: 108px;
+    left: 112px;
     margin: 0;
+    transition: all 200ms linear;
 }
+
+.down-arrow2 {
+    width: 10px;
+    position: relative;
+    top: -41px;
+    left: 115px;
+    margin: 0;
+    transition: all 200ms linear;
+}
+
+/* Submenu for Features */
+
+.features-submenu {
+    width: 100%;
+    max-width: 120px;
+    height: 147px;
+    border: 1px solid black;
+    position: relative;
+    top: -5px;
+    left: 50px;
+}
+
+.todo-icon {
+    width: 18px;
+    margin-left: 1px;
+}
+
+.active {
+    transform: rotate(180deg);   
+}
+
+div > a {
+    text-decoration: none;
+    color: var(--mediumGray);
+}
+
 
 
 
