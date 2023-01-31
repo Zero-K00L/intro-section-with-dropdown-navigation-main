@@ -117,8 +117,7 @@ nav {
     max-width: 35.734%;
     margin-left: 0; 
     margin-right: auto;
-    background-color: var(--mediumGray);
-    opacity: 0.4;
+    background-color: var(--almostBlack);
     filter: contrast(13);
     z-index: 4;
 }
@@ -127,7 +126,7 @@ nav {
 
 #overlay {
     transform: translateX(100%);
-    transition: all 150ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
   
 #overlay.open {
@@ -136,11 +135,19 @@ nav {
 
 #overlay2 {
     transform: translateX(-100%);
-    transition: all 150ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 #overlay2.open {
     transform: translateX(0%);
+}
+
+#overlay.close {
+    transform: translateX(100%);
+}
+    
+#overlay2.close {
+transform: translateX(-100%);
 }
 
 
@@ -400,7 +407,7 @@ nav {
 
 /* Very large devices (very large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {
-    
+
 }
 
         /*position: absolute;
