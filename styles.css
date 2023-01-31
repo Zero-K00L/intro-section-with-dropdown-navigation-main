@@ -177,6 +177,16 @@ transform: translateX(-100%);
     margin-bottom: 31.15px;
 }
 
+.down-arrow1 {
+    width: 10px;
+    position: relative;
+    top: -40px;
+    left: 108px;
+    margin: 0;
+}
+
+
+
 .login-container {
     display: flex;
     flex-direction: column;
@@ -205,7 +215,7 @@ transform: translateX(-100%);
     font-family: Epilogue, sans-serif;
     color: var(--mediumGray);
     transition: 150ms ease-in-out;
-    box-shadow: 0px 2px 4px var(--mediumGray);
+    box-shadow: 0px 0px 4px var(--mediumGray);
 }
 
 .register-btn:active {
@@ -349,7 +359,7 @@ transform: translateX(-100%);
     left: -1px;
     cursor: pointer;
     transition: 150ms ease-in-out;
-    box-shadow: 0px 2px 4px var(--mediumGray);
+    box-shadow: 0px 0px 4px var(--mediumGray);
 }
 
 .hero-btn:hover {
