@@ -145,7 +145,7 @@ nav {
 }
     
 #overlay2.close {
-transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 
@@ -603,13 +603,20 @@ ul {
     }
 
     .header-logo {
-        margin-left: 39px;
+        margin-left: 40px;
         margin-right: 74px;
         margin-top: 30px;
     }
 
     .link:not(:last-child) {
         margin-right: 5px;
+    }
+
+    .arrow1 {
+        width: 10px;
+        position: relative;
+        display: inline-block;
+        margin: 0;
     }
 
 }
