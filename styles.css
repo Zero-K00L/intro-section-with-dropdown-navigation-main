@@ -84,6 +84,10 @@ nav {
     margin-left: 15px;
 }
 
+.header-nav {
+    display: none;
+}
+
 
 .header-links {
     display: none;
@@ -575,6 +579,9 @@ ul {
         background-image: url('images/image-hero-desktop.png');
         background-size: cover;
         background-position: center;
+        order: 1;
+        margin-top: 41px;
+        margin-right: 129px;
     }
 
     #btnHamburger {
@@ -584,22 +591,8 @@ ul {
     nav {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 25px;
-    }
-
-    .header-links {
-        display: inline-block;
-    }
-
-    .link {
-        text-decoration: none;
-        color: var(--mediumGray);
-        position: relative;
-        top: 11px;
-        left: -12px;
-        font-size: 14px;
-        font-weight: 700;
     }
 
     .header-logo {
@@ -608,15 +601,130 @@ ul {
         margin-top: 30px;
     }
 
-    .link:not(:last-child) {
-        margin-right: 5px;
+    .header-nav {
+        position: relative;
+        top: 18px;
+        left: -52px;
+        font-size: 14px;
     }
 
-    .arrow1 {
-        width: 10px;
+
+    .header-arrow {
         position: relative;
+        left: 5px;
+        top: -1px;
+    }
+
+    .header-arrow2 {
+        left: 4px;
+    }
+
+    .header-link {
+        text-decoration: none;
+        color: var(--mediumGray);
+    }
+
+    .header-company {
+        margin-left: 40px;
+    }
+
+    .header-careers {
+        margin-left: 39px;
+    }
+
+    .header-about {
+        margin-left: 37px;
+    }
+
+    .login {
+        display: block;
+    }
+
+    .header-nav {
         display: inline-block;
-        margin: 0;
+    }
+
+    /* Hero Section */
+
+    .hero {
+        display: flex;
+    }
+
+    .hero-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+        
+    }
+
+    .hero-heading {
+        width: 62%;
+        margin-left: 164px;
+        font-size: 80px;
+        text-align: left;
+        letter-spacing: -1.3px;
+        margin-top: 119px;
+        margin-bottom: 69px;
+        position: relative;
+        top: 24px;
+        display: inline-block;
+    }
+
+    .hero-desc {
+        text-align: left;
+        width: 53%;
+        margin-left: 164px;
+        font-size: 18px;
+        margin-bottom: 52px;
+    }
+
+    .hero-btn {
+        margin: -1px 0 107px 165px;
+        width: 163px;
+        height: 55px;
+        font-size: 17.5px;
+        padding-bottom: 1px;
+        font-weight: 700;
+        box-shadow: 0px 0px 10px -1px var(--almostBlack);
+    }
+
+    .clients {
+        width: 50%;
+        margin-left: 161px;
+        margin-top: 7px;
+    }
+
+    .client-1 {
+        width: 114px;
+        height: 20px;
+        position: relative;
+        top: 3px;
+        left: 0px;
+        margin-right: 26px;
+    }
+
+    .client-2 {
+        width: 74px;
+        height: 36px;
+        position: relative;
+        top: -5px;
+        left: 11px;
+    }
+
+    .client-3 {
+        width: 89px;
+        height: 21px;
+        position: relative;
+        top: 3px;
+        left: -1px;
+    }
+
+    .client-4 {
+        width: 87px;
+        height: 26px;
+        position: relative;
+        top: 2px;
+        left: -1px;
     }
 
 }
