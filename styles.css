@@ -215,6 +215,7 @@ nav {
     padding: 0;
     display: none;
     animation: open 200ms linear, growDown 200ms linear;
+    background-color: var(--almostWhite);
 }
 
 @keyframes open {
@@ -313,6 +314,7 @@ ul {
     padding: 0;
     display: none;
     animation: open 200ms linear, growDown 200ms linear;
+    background-color: var(--almostWhite);
 }
 
 .company-submenu.show {
@@ -628,6 +630,16 @@ ul {
         position: relative;
         left: 4px;
         top: -1px;
+        transition: all 200ms linear;
+    }
+    
+    .header-arrow svg {
+        fill: red;
+    }
+    
+    .header-arrow.active svg {
+        transform: rotate(180deg);
+        fill: var(--almostBlack);
     }
 
     .header-arrow2 {
@@ -650,11 +662,73 @@ ul {
         display: inline-block;
     }
 
+    /* Desktop Features Submenu */
+
+    .features-submenu-desktop {
+        width: 100%;
+        max-width: 153px;
+        height: 160px;
+        position: absolute;
+        top: 36px;
+        left: -35px;
+        list-style: none;
+        padding: 0;
+        display: none;
+        animation: open 200ms linear, growDown 200ms linear;
+        box-shadow: 3px 12px 80px -24px var(--mediumGray);
+        border-radius: 10px;
+        padding-left: 25px;
+        padding-top: 27px;
+        background-color: var(--almostWhite);
+    }
+
+    .features-submenu-desktop.show {
+        display: inline-block;
+    }
+
+    .submenu-option {
+        width: 72%;
+        background-color: var(--almostWhite);
+    }
+
     .header-company {
         margin-left: -1px;
         position: relative;
         left: 47px;
     }
+
+    /* Desktop Company Submenu */
+
+    .company-submenu-desktop {
+        width: 149%;
+        max-width: 119px;
+        height: 129px;
+        color: var(--mediumGray);
+        position: absolute;
+        left: 0px;
+        top: 36px;
+        display: none;
+        animation: open 200ms linear, growDown 200ms linear;
+        box-shadow: 3px 12px 80px -24px var(--mediumGray);
+        background-color: var(--almostWhite);
+        border-radius: 10px;
+        padding-top: 24px;
+        padding-left: 25px;
+    }
+    
+    .company-submenu-desktop.show {
+        display: inline-block;
+    }
+    
+    .company-submenu-desktop > li:nth-child(2) {
+        width: 71%;
+    }
+    
+    .company-submenu-desktop > li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+
 
     .header-careers {
         margin-left: 43px;
@@ -791,27 +865,7 @@ ul {
         left: 7px;
     }
 
-    .features-submenu {
-        width: 100%;
-        max-width: 153px;
-        height: 160px;
-        position: absolute;
-        top: 36px;
-        left: -36px;
-        list-style: none;
-        padding: 0;
-        display: inline-block;
-        animation: open 200ms linear, growDown 200ms linear;
-        box-shadow: 3px 12px 80px -24px var(--mediumGray);
-        border-radius: 10px;
-        padding-left: 25px;
-        padding-top: 27px;
-    }
 
-    .submenu-option {
-        width: 72%;
-        background-color: var(--almostWhite);
-    }
 
     .icon {
 

@@ -10,8 +10,13 @@ const companySelector = document.querySelector('.company-subM');
 const companySubmenu = document.querySelector('.company-submenu');
 const arrow2 = document.querySelector('.down-arrow2');
 
+const featuresSubmenuDesktop = document.querySelector('.features-submenu-desktop');
 const desktopFeatures = document.querySelector('.header-features');
 const desktopArrow1 = document.querySelector('.header-arrow1');
+
+const companySubmenuDesktop = document.querySelector('.company-submenu-desktop');
+const desktopCompany = document.querySelector('.header-company');
+const desktopArrow2 = document.querySelector('.header-arrow2');
 
 btnHamburger.addEventListener('click', function(){
 
@@ -90,17 +95,31 @@ companySelector.addEventListener('click', function() {
 // Reveals the submenu for Features Desktop
 
 desktopFeatures.addEventListener('click', function() {
-    if (!desktopFeatures.classList.contains('show')) {
-        desktopFeatures.classList.remove('hidden');
+    if (!featuresSubmenuDesktop.classList.contains('show')) {
+        featuresSubmenuDesktop.classList.remove('hidden');
         desktopArrow1.classList.toggle('active');
-        desktopFeatures.classList.toggle('show');
+        featuresSubmenuDesktop.classList.toggle('show');
     }
     else {
-        desktopFeatures.classList.toggle('hidden');
-        desktopFeatures.classList.remove('show');
+        featuresSubmenuDesktop.classList.toggle('hidden');
+        featuresSubmenuDesktop.classList.remove('show');
         desktopArrow1.classList.toggle("active");
     }
 });
 
 
+// Reveals the submenu for Company Desktop
+
+desktopCompany.addEventListener('click', function() {
+    if (!companySubmenuDesktop.classList.contains('show')) {
+        companySubmenuDesktop.classList.remove('hidden');
+        desktopArrow2.classList.toggle('active');
+        companySubmenuDesktop.classList.toggle('show');
+    }
+    else {
+        companySubmenuDesktop.classList.toggle('hidden');
+        companySubmenuDesktop.classList.remove('show');
+        desktopArrow2.classList.toggle("active");
+    }
+})
 
