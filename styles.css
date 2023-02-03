@@ -635,13 +635,13 @@ ul {
 
     .header-arrow.active {
         transform: rotate(180deg);
+        filter:contrast(200);
     }
 
     .header-arrow2 {
         left: 4px;
     }
 
-    
     .header-link {
         text-decoration: none;
         color: var(--mediumGray);
