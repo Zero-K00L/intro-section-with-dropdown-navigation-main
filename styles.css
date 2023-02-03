@@ -632,14 +632,9 @@ ul {
         top: -1px;
         transition: all 200ms linear;
     }
-    
-    .header-arrow svg {
-        fill: red;
-    }
-    
-    .header-arrow.active svg {
+
+    .header-arrow.active {
         transform: rotate(180deg);
-        fill: var(--almostBlack);
     }
 
     .header-arrow2 {
@@ -687,8 +682,17 @@ ul {
     }
 
     .submenu-option {
-        width: 72%;
-        background-color: var(--almostWhite);
+        width: 69%;
+        transition: 150ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .submenu-option:hover {
+        color: var(--almostBlack);
+    }
+
+    .feature-subItem {
+        width: 72%
     }
 
     .header-company {
@@ -712,8 +716,8 @@ ul {
         box-shadow: 3px 12px 80px -24px var(--mediumGray);
         background-color: var(--almostWhite);
         border-radius: 10px;
-        padding-top: 24px;
-        padding-left: 25px;
+        padding-top: 31px;
+        padding-left: 14px;
     }
     
     .company-submenu-desktop.show {
