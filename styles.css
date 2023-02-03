@@ -645,24 +645,35 @@ ul {
         color: var(--almostBlack);
     }
 
+    .header-features {
+        width: 60px;
+        display: inline-block;
+    }
+
     .header-company {
-        margin-left: 44px;
+        margin-left: -1px;
+        position: relative;
+        left: 47px;
     }
 
     .header-careers {
         margin-left: 43px;
+        position: relative;
+        left: 47px;
     }
 
     .header-about {
         margin-left: 40px;
         margin-right: 45vw;
+        position: relative;
+        left: 47px;
     }
 
     .desktop-login {
         text-decoration: none;
         color: var(--mediumGray);
         position: relative;
-        left: 5px;
+        left: 26px;
     }
 
     .header-btn {

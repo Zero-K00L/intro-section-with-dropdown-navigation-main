@@ -3,12 +3,15 @@ const overlayAnim = document.querySelector('#overlay');
 const overlayAnim2 = document.querySelector('#overlay2');
 const fadeElems = document.querySelectorAll('.has-fade');
 const fadeElems2 = document.querySelectorAll('.has-fade2');
-const featuresSelector = document.querySelector('.features-subM');
-const featuresSubmenu = document.querySelector('.features-submenu');
+const featuresSelector = document.querySelector('.features-subM');  
+const featuresSubmenu = document.querySelector('.features-submenu'); 
 const arrow1 = document.querySelector('.down-arrow1');
 const companySelector = document.querySelector('.company-subM');
 const companySubmenu = document.querySelector('.company-submenu');
 const arrow2 = document.querySelector('.down-arrow2');
+
+const desktopFeatures = document.querySelector('.header-features');
+const desktopArrow1 = document.querySelector('.header-arrow1');
 
 btnHamburger.addEventListener('click', function(){
 
@@ -53,7 +56,7 @@ btnHamburger.addEventListener("click", function() {
 });
 
 
-// Reveals the submenu for Features
+// Reveals the submenu for Features Mobile
 
 featuresSelector.addEventListener('click', function() {
     if (!featuresSubmenu.classList.contains('show')) {
@@ -68,7 +71,7 @@ featuresSelector.addEventListener('click', function() {
     }
 });
 
-
+// Reveals the submenu for Company Mobile
 
 companySelector.addEventListener('click', function() {
     if (!companySubmenu.classList.contains('show')) {
@@ -84,5 +87,20 @@ companySelector.addEventListener('click', function() {
 })
 
 
+// Reveals the submenu for Features Desktop
 
-/* submenu.style.display = submenu.classList.contains("show") ? "inline-block" : "none"; */
+desktopFeatures.addEventListener('click', function() {
+    if (!desktopFeatures.classList.contains('show')) {
+        desktopFeatures.classList.remove('hidden');
+        desktopArrow1.classList.toggle('active');
+        desktopFeatures.classList.toggle('show');
+    }
+    else {
+        desktopFeatures.classList.toggle('hidden');
+        desktopFeatures.classList.remove('show');
+        desktopArrow1.classList.toggle("active");
+    }
+});
+
+
+
