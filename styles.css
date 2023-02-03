@@ -634,13 +634,6 @@ ul {
         left: 4px;
     }
 
-    .header-nav > li:hover {
-        color: black;
-    }
-
-    .header-item:hover {
-        color: var(--almostBlack);
-    }
     
     .header-link {
         text-decoration: none;
@@ -648,9 +641,9 @@ ul {
         transition: 150ms ease-in-out;
     }
 
-/*     .header-link:hover {
+    .header-link:hover {
         color: var(--almostBlack);
-    } */
+    }
 
     .header-company {
         margin-left: 44px;
@@ -787,6 +780,58 @@ ul {
         left: 7px;
     }
 
+    .features-submenu {
+        width: 100%;
+        max-width: 153px;
+        height: 160px;
+        position: absolute;
+        top: 36px;
+        left: -36px;
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        animation: open 200ms linear, growDown 200ms linear;
+        box-shadow: 3px 12px 80px -24px var(--mediumGray);
+        border-radius: 10px;
+        padding-left: 25px;
+        padding-top: 27px;
+    }
+
+    .submenu-option {
+        width: 72%;
+        background-color: var(--almostWhite);
+    }
+
+    .icon {
+
+    }
+
+    .icon-1 {
+        width: 14px;
+        height: 16px;
+    }
+
+    .icon-2 {
+        width: 17px;
+        height: 16px;
+    }
+
+    .icon-3 {
+        width: 12px;
+        height: 17px;
+    }
+
+    .icon-4 {
+        margin-left: 1px;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: -2px;
+    }
+
+    ul > li:not(:last-child) {
+        margin-bottom: 11px;
+    }
 
 }
 
