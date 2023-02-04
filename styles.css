@@ -553,6 +553,25 @@ ul {
     left: -1px;
 }
 
+
+/* Dark Mode Styles */
+
+.dark-background {
+    background-color: var(--almostBlack);
+}
+
+.light-text {
+    color: var(--almostWhite);
+}
+
+.light-background {
+    background-color: var(--almostWhite);
+}
+
+
+
+
+
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
 
