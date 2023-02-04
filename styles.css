@@ -18,6 +18,7 @@ html {
 
 body {
     margin: 0;
+    background-color: var(--almostWhite);
 }
 
 .main {
@@ -559,6 +560,11 @@ ul {
 
 /* Very large devices (very large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {
+
+    body {
+        background-color: var(--almostWhite);
+    }
+
     .main {
         max-width: 1440px;
         height: 900px;
@@ -566,7 +572,7 @@ ul {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 1px solid black;
+/*         border: 1px solid black; */
     }
 
     .overlay {
@@ -624,7 +630,6 @@ ul {
     .header-nav > li:nth-child(1) {
         margin-right: -2px;
     }
-
 
     .header-arrow {
         position: relative;
@@ -731,8 +736,6 @@ ul {
     .company-submenu-desktop > li:not(:last-child) {
         margin-bottom: 15px;
     }
-
-
 
     .header-careers {
         margin-left: 43px;
@@ -869,12 +872,6 @@ ul {
         left: 7px;
     }
 
-
-
-    .icon {
-
-    }
-
     .icon-1 {
         width: 14px;
         height: 16px;
@@ -902,6 +899,86 @@ ul {
         margin-bottom: 11px;
     }
 
+}
+
+/* Very large devices (very large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1920px) {
+    .main {
+        max-width: 98%;
+        border: 1px solid black;
+    }
+
+    .img-container-desktop {
+        max-width: 554px;
+        height: 739px;
+        margin-right: 129px;
+    }
+
+    .header-logo {
+        left: 0px;
+        margin-left: 0px;
+    }
+
+
+    .header-nav > li:nth-child(1) {
+        margin-right: -2px;
+        width: 96px;
+    }
+
+    ul > li:not(:last-child) {
+        margin-bottom: 11px;
+    }
+
+    .hero-content-container {
+        align-items: center;
+    }
+
+    .hero-heading {
+        margin-left: -126px;
+        font-size: 93px;
+        width: 62%;
+
+    }
+
+    .hero-desc {
+        width: 43%;
+        margin-left: 0px;
+        font-size: 21px;
+        position: relative;
+        left: -167px;
+    }
+
+    .hero-btn {
+        align-self: flex-start;
+        margin: 0px 0 169px 163px;
+    }
+
+    .header-logo {
+        margin-right: 75px;
+        margin-top: 30px;
+        margin-left: 43px;
+    }
+
+    .header-link {
+        font-size: 16px;
+    }
+
+    .header-features {
+        width: 70px;
+    }
+
+    .header-company {
+        left: 35px;
+    }
+
+    .header-about {
+        margin-right: 56vw;
+    }
+
+    .clients {
+        margin-left: -262px;
+        width: 58%;
+    }
 }
 
 
