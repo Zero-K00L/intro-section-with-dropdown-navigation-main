@@ -9,11 +9,10 @@ const arrow1 = document.querySelector('.down-arrow1');
 const companySelector = document.querySelector('.company-subM');
 const companySubmenu = document.querySelector('.company-submenu');
 const arrow2 = document.querySelector('.down-arrow2');
-
+// Desktop
 const featuresSubmenuDesktop = document.querySelector('.features-submenu-desktop');
 const desktopFeatures = document.querySelector('.header-features');
 const desktopArrow1 = document.querySelector('.header-arrow1');
-
 const companySubmenuDesktop = document.querySelector('.company-submenu-desktop');
 const desktopCompany = document.querySelector('.header-company');
 const desktopArrow2 = document.querySelector('.header-arrow2');
@@ -122,4 +121,42 @@ desktopCompany.addEventListener('click', function() {
         desktopArrow2.classList.toggle("active");
     }
 })
+
+// Dark Mode Toggle
+
+/* const checkbox = document.getElementById('checkbox');
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const header = document.querySelector('.hero-heading');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+checkbox.addEventListener('change', function() {
+    body.classList.toggle('dark-background');
+    main.classList.toggle('dark-background');
+    header.classList.toggle('light-text');
+    hamburgerMenu.classList.toggle('light-background');
+}); */
+
+
+const checkbox = document.getElementById('checkbox');
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const header = document.querySelector('.hero-heading');
+const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
+const logo = document.querySelector('.header-logo .logo-img');
+
+
+checkbox.addEventListener('change', function() {
+    body.classList.toggle('dark-background');
+    main.classList.toggle('dark-background');
+    header.classList.toggle('light-text');
+    overlay.classList.toggle('dark-background');
+    logo.setAttribute("xlink:href", "images/logo-dark.svg");
+
+    hamburgerMenus.forEach(function(hamburgerMenu) {
+    hamburgerMenu.classList.toggle('light-background');
+    });
+});
+
+// Change Logo Color
 

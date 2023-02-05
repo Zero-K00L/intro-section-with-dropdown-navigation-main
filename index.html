@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
   </head>
 
   <body>
@@ -62,13 +64,23 @@
         </div>
         <div id="overlay2" class="overlay-2 has-fade2"></div>
         <nav>
-          <img  class="header-logo"src="images/logo.svg" alt="" aria-hidden="true">
-          <div>
+
+          <svg class="header-logo" viewBox="0 0 width height" xmlns="http://www.w3.org/2000/svg">
+            <image class="logo-img" x="0" y="0" width="width" height="height" xlink:href="images/logo.svg" />
+          </svg>
+
+
+          <div class="toggle-container">
             <input type="checkbox" class="checkbox" id="checkbox">
-            <label for ="checkbox" class="label">
-              <div class="ball"></div>
+            <label for="checkbox" class="label">
+              <div class="icon-container">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="switch"></div>
             </label>
           </div>
+
           <!-- Desktop Navigation Menu -->
           <ul class="header-nav">
             <li class="header-item">
