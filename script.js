@@ -96,22 +96,13 @@ companySelector.addEventListener('click', function() {
 desktopFeatures.addEventListener('click', function() {
     if (!featuresSubmenuDesktop.classList.contains('show')) {
       featuresSubmenuDesktop.classList.remove('hidden');
-      if (document.querySelector(".main").classList.contains("dark-background")) {
-        desktopArrow1.classList.toggle('active-dark');
-/*         featuresSubmenuDesktop.classList.toggle('show-dark'); */
-      } else {
-        desktopArrow1.classList.toggle('active');
-        
-      }
+      desktopArrow1.classList.toggle('active');
       featuresSubmenuDesktop.classList.toggle('show');
+      
     } else {
       featuresSubmenuDesktop.classList.toggle('hidden');
       featuresSubmenuDesktop.classList.remove('show');
-      if (document.querySelector(".main").classList.contains("dark-background")) {
-        desktopArrow1.classList.toggle("active-dark");
-      } else {
-        desktopArrow1.classList.toggle("active");
-      }
+      desktopArrow1.classList.toggle("active");
     }
 });
   
@@ -123,24 +114,13 @@ desktopFeatures.addEventListener('click', function() {
 desktopCompany.addEventListener('click', function() {
     if (!companySubmenuDesktop.classList.contains('show')) {
       companySubmenuDesktop.classList.remove('hidden');
-      if (document.querySelector('.main').classList.contains('dark-background')) {
-        desktopArrow2.classList.toggle('active-dark');
-/*         companySubmenuDesktop.classList.toggle('show-dark'); */
-      } else {
-        desktopArrow2.classList.toggle('active');
-        
-      }
+      desktopArrow2.classList.toggle('active');
       companySubmenuDesktop.classList.toggle('show');
-
     }
     else {
       companySubmenuDesktop.classList.toggle('hidden');
       companySubmenuDesktop.classList.remove('show');
-      if (document.querySelector('.main').classList.contains('dark-background')) {
-        desktopArrow2.classList.toggle('active-dark');
-      } else {
-        desktopArrow2.classList.toggle('active');
-      }
+      desktopArrow2.classList.toggle('active');
     }
 })
 
@@ -176,7 +156,8 @@ checkbox.addEventListener('change', function() {
   heroBtn.classList.toggle('.light-button');
   featuresSubmenuDesktop.classList.toggle('dark-background');
   companySubmenuDesktop.classList.toggle('dark-background');
-    
+  desktopArrow1.classList.toggle('dark');
+  desktopArrow2.classList.toggle('dark');
 
 
   headerLinks.forEach(function(headerLink) {
