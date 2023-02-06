@@ -98,10 +98,11 @@ desktopFeatures.addEventListener('click', function() {
       featuresSubmenuDesktop.classList.remove('hidden');
       if (document.querySelector(".main").classList.contains("dark-background")) {
         desktopArrow1.classList.toggle('active-dark');
+        featuresSubmenuDesktop.classList.toggle('show-dark');
       } else {
         desktopArrow1.classList.toggle('active');
+        featuresSubmenuDesktop.classList.toggle('show');
       }
-      featuresSubmenuDesktop.classList.toggle('show');
     } else {
       featuresSubmenuDesktop.classList.toggle('hidden');
       featuresSubmenuDesktop.classList.remove('show');
@@ -111,13 +112,40 @@ desktopFeatures.addEventListener('click', function() {
         desktopArrow1.classList.toggle("active");
       }
     }
-  });
+});
   
 
 
 // Reveals the submenu for Company Desktop
 
 desktopCompany.addEventListener('click', function() {
+    if (!companySubmenuDesktop.classList.contains('show')) {
+      companySubmenuDesktop.classList.remove('hidden');
+      if (document.querySelector('.main').classList.contains('dark-background')) {
+        desktopArrow2.classList.toggle('active-dark');
+        companySubmenuDesktop.classList.toggle('show-dark');
+      } else {
+        desktopArrow2.classList.toggle('active');
+        companySubmenuDesktop.classList.toggle('show');
+      }
+
+    }
+    else {
+      companySubmenuDesktop.classList.toggle('hidden');
+      companySubmenuDesktop.classList.remove('show');
+      if (document.querySelector('.main').classList.contains('dark-background')) {
+        desktopArrow2.classList.toggle('active-dark');
+      } else {
+        desktopArrow2.classList.toggle('active');
+      }
+    }
+})
+  
+
+
+
+
+/* desktopCompany.addEventListener('click', function() {
     if (!companySubmenuDesktop.classList.contains('show')) {
         companySubmenuDesktop.classList.remove('hidden');
         desktopArrow2.classList.toggle('active');
@@ -128,7 +156,9 @@ desktopCompany.addEventListener('click', function() {
         companySubmenuDesktop.classList.remove('show');
         desktopArrow2.classList.toggle("active");
     }
-})
+}) */
+
+
 
 // Dark Mode Toggle
 
@@ -200,6 +230,8 @@ const heroImgDesktop = document.querySelector('.img-container-desktop');
 const headerLinks = document.querySelectorAll('.header-link');
 const headerArrows = document.querySelectorAll('.header-arrow');
 
+const submenuOptions = document.querySelectorAll('.submenu-option');
+
 window.onload = function() {
   checkbox.checked = false;
 };
@@ -213,6 +245,10 @@ checkbox.addEventListener('change', function() {
   
   headerLinks.forEach(function(headerLink) {
     headerLink.classList.toggle('light-text');
+  })
+
+  submenuOptions.forEach(function(submenuOption) {
+    submenuOption.classList.toggle('gray-text');
   })
   
   headerArrows.forEach(function(headerArrow) {
