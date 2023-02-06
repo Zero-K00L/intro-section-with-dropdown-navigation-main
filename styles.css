@@ -570,6 +570,27 @@ ul {
     background-color: var(--almostWhite);
 }
 
+.light-filter {
+    filter:contrast(0);
+}
+
+.light-button {
+    background-color: var(--almostWhite);
+    color: var(--almostBlack);
+}
+
+/* .hero-btn:hover.light-button:hover {
+    border: 2px solid var(--almostWhite);
+    background-color: var(--almostBlack);
+    color: var(--almostWhite)
+} */
+
+
+.header-link.light-text:hover {
+    color: white;
+}
+
+
 .hamburger-menu.light-background {
     background-color: var(--almostWhite);
 }
@@ -581,7 +602,7 @@ ul {
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 49%;
+    left: 77%;
     top: 2%;
     z-index: 1;
   }
@@ -597,9 +618,9 @@ ul {
     width: 80px;
     height: 40px;
     border-radius: 40px;
-    background-color: #ddd;
+    background-color: var(--almostWhite);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    transition: background 0.2s linear;
+    transition: background 200ms linear;
   }
   
   .icon-container {
@@ -629,11 +650,11 @@ ul {
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    transition: transform 0.2s linear;
+    transition: transform 200ms linear;
   }
   
   .checkbox:checked + .label {
-    background-color: #292c35;
+    background-color: var(--almostBlack);
   }
   
   .checkbox:checked + .label .switch {
@@ -805,6 +826,11 @@ ul {
         filter:contrast(200);
     }
 
+    .header-arrow.active-dark {
+        transform:rotate(180deg);
+        filter:contrast(0) brightness(200%);
+    }
+
     .header-arrow2 {
         left: 4px;
     }
@@ -818,6 +844,10 @@ ul {
     .header-link:hover {
         color: var(--almostBlack);
     }
+
+    .header-
+
+
 
     .header-features {
         width: 60px;
@@ -990,7 +1020,7 @@ ul {
         font-size: 14px;
         padding-bottom: 1px;
         font-weight: 700;
-        box-shadow: 0px 0px 4px var(--almostBlack);
+        box-shadow: 0px 0px 4px var(--mediumGray);
     }
 
     .clients {
@@ -1032,6 +1062,14 @@ ul {
         position: relative;
         top: 1px;
         left: 7px;
+    }
+
+    .icon {
+        margin-left: 1px;
+        width: 18px;
+        height: 20px;
+        position: relative;
+        top: -4px;
     }
 
     .icon-1 {
@@ -1335,7 +1373,7 @@ ul {
         font-size: 14px;
         padding-bottom: 1px;
         font-weight: 700;
-        box-shadow: 0px 0px 4px var(--almostBlack);
+        box-shadow: 0px 0px 4px var(--mediumGray);
     }
 
     .clients {
@@ -1704,7 +1742,7 @@ ul {
         font-size: 17.5px;
         padding-bottom: 1px;
         font-weight: 700;
-        box-shadow: 0px 0px 4px var(--almostBlack);
+        box-shadow: 0px 0px 4px var(--mediumGray);
     }
 
     .clients {

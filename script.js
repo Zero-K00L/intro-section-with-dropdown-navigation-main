@@ -95,16 +95,24 @@ companySelector.addEventListener('click', function() {
 
 desktopFeatures.addEventListener('click', function() {
     if (!featuresSubmenuDesktop.classList.contains('show')) {
-        featuresSubmenuDesktop.classList.remove('hidden');
+      featuresSubmenuDesktop.classList.remove('hidden');
+      if (document.querySelector(".main").classList.contains("dark-background")) {
+        desktopArrow1.classList.toggle('active-dark');
+      } else {
         desktopArrow1.classList.toggle('active');
-        featuresSubmenuDesktop.classList.toggle('show');
-    }
-    else {
-        featuresSubmenuDesktop.classList.toggle('hidden');
-        featuresSubmenuDesktop.classList.remove('show');
+      }
+      featuresSubmenuDesktop.classList.toggle('show');
+    } else {
+      featuresSubmenuDesktop.classList.toggle('hidden');
+      featuresSubmenuDesktop.classList.remove('show');
+      if (document.querySelector(".main").classList.contains("dark-background")) {
+        desktopArrow1.classList.toggle("active-dark");
+      } else {
         desktopArrow1.classList.toggle("active");
+      }
     }
-});
+  });
+  
 
 
 // Reveals the submenu for Company Desktop
@@ -128,20 +136,6 @@ desktopCompany.addEventListener('click', function() {
 const body = document.querySelector('body');
 const main = document.querySelector('main');
 const header = document.querySelector('.hero-heading');
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-
-checkbox.addEventListener('change', function() {
-    body.classList.toggle('dark-background');
-    main.classList.toggle('dark-background');
-    header.classList.toggle('light-text');
-    hamburgerMenu.classList.toggle('light-background');
-}); */
-
-
-const checkbox = document.getElementById('checkbox');
-const body = document.querySelector('body');
-const main = document.querySelector('main');
-const header = document.querySelector('.hero-heading');
 const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
 const logo = document.querySelector('.header-logo .logo-img');
 
@@ -156,7 +150,112 @@ checkbox.addEventListener('change', function() {
     hamburgerMenus.forEach(function(hamburgerMenu) {
     hamburgerMenu.classList.toggle('light-background');
     });
+}); */
+
+
+/* const checkbox = document.getElementById('checkbox');
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const header = document.querySelector('.hero-heading');
+const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
+const logo = document.querySelector('.header-logo .logo-img');
+
+const heroImgMobile = document.querySelector('.img-container-mobile');
+const heroImgDesktop = document.querySelector('.img-container-desktop');
+
+const originalLogo = logo.getAttribute("xlink:href");
+
+checkbox.addEventListener('change', function() {
+    body.classList.toggle('dark-background');
+    main.classList.toggle('dark-background');
+    header.classList.toggle('light-text');
+    overlay.classList.toggle('dark-background');
+
+    if (logo.getAttribute("xlink:href") === "images/logo-dark.svg") {
+        logo.setAttribute("xlink:href", originalLogo);
+    } else {
+        logo.setAttribute("xlink:href", "images/logo-dark.svg");
+    }
+
+    hamburgerMenus.forEach(function(hamburgerMenu) {
+    hamburgerMenu.classList.toggle('light-background');
+    });
+}); */
+
+
+
+
+const checkbox = document.getElementById('checkbox');
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const header = document.querySelector('.hero-heading');
+const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
+const logo = document.querySelector('.header-logo .logo-img');
+
+const heroBtn = document.querySelector('.hero-btn');
+
+const heroImgMobile = document.querySelector('.img-container-mobile');
+const heroImgDesktop = document.querySelector('.img-container-desktop');
+
+const headerLinks = document.querySelectorAll('.header-link');
+const headerArrows = document.querySelectorAll('.header-arrow');
+
+window.onload = function() {
+  checkbox.checked = false;
+};
+
+checkbox.addEventListener('change', function() {
+  body.classList.toggle('dark-background');
+  main.classList.toggle('dark-background');
+  header.classList.toggle('light-text');
+  overlay.classList.toggle('dark-background');
+  heroBtn.classList.toggle('.light-button');
+  
+  headerLinks.forEach(function(headerLink) {
+    headerLink.classList.toggle('light-text');
+  })
+  
+  headerArrows.forEach(function(headerArrow) {
+    headerArrow.classList.toggle('.light-filter');
+  })
+
+  if (checkbox.checked) {
+    logo.setAttribute("xlink:href", "images/logo-dark.svg");
+  } else {
+    logo.setAttribute("xlink:href", "images/logo.svg");
+  }
+
+  hamburgerMenus.forEach(function(hamburgerMenu) {
+    hamburgerMenu.classList.toggle('light-background');
+  });
 });
+
+/* checkbox.addEventListener('change', function() {
+    body.classList.toggle('dark-background');
+    main.classList.toggle('dark-background');
+    header.classList.toggle('light-text');
+    overlay.classList.toggle('dark-background');
+    heroBtn.classList.toggle('.light-button');
+
+
+    if (checkbox.checked) {
+      logo.setAttribute("xlink:href", "images/logo-dark.svg");
+      heroBtn.style.backgroundColor = "white";
+      heroBtn.style.color = "black";
+    } else {
+      logo.setAttribute("xlink:href", "images/logo.svg");
+      heroBtn.style.backgroundColor = "black";
+      heroBtn.style.color = "white";
+    }
+  
+    hamburgerMenus.forEach(function(hamburgerMenu) {
+      hamburgerMenu.classList.toggle('light-background');
+    });
+  }); */
+
+
+
+
 
 // Change Logo Color
 
