@@ -629,6 +629,7 @@ ul {
     background-color: var(--almostWhite);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     transition: background 200ms linear;
+    cursor: pointer;
   }
   
   .icon-container {
@@ -659,10 +660,11 @@ ul {
     background-color: var(--almostWhite);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     transition: transform 200ms linear;
+    cursor: pointer;
   }
 
   .switch.gray-background {
-    background-color: var(--mediumGray);
+    background-color: #333;
   }
   
   .checkbox:checked + .label {
@@ -830,7 +832,7 @@ ul {
         position: relative;
         left: 4px;
         top: -1px;
-        transition: all 200ms linear;
+        transition: all 150ms ease-in-out;
     }
 
     .header-arrow.active {
@@ -841,6 +843,18 @@ ul {
     .header-arrow.active.dark {
         filter:contrast(0) brightness(200%);
     }
+
+    /* For Mouseover Events */
+
+    .header-arrow.lighten {
+        filter:contrast(200);
+    }
+
+    .header-arrow.darken {
+        filter:contrast(0) brightness(200%);
+    }
+
+
 
     .header-arrow2 {
         left: 4px;
@@ -1207,7 +1221,7 @@ ul {
         position: relative;
         left: 4px;
         top: -1px;
-        transition: all 200ms linear;
+        transition: all 150ms ease-in-out;
     }
 
     .header-arrow.active {
@@ -1563,7 +1577,7 @@ ul {
         position: relative;
         left: 4px;
         top: -1px;
-        transition: all 200ms linear;
+        transition: all 150ms ease-in-out;
     }
 
     .header-arrow.active {

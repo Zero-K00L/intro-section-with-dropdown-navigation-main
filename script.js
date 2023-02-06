@@ -14,7 +14,7 @@ const featuresSubmenuDesktop = document.querySelector('.features-submenu-desktop
 const desktopFeatures = document.querySelector('.header-features');
 const desktopArrow1 = document.querySelector('.header-arrow1');
 const companySubmenuDesktop = document.querySelector('.company-submenu-desktop');
-const desktopCompany = document.querySelector('.header-company');
+const desktopCompany = document.querySelector('.company-link');
 const desktopArrow2 = document.querySelector('.header-arrow2');
 
 btnHamburger.addEventListener('click', function(){
@@ -90,6 +90,58 @@ companySelector.addEventListener('click', function() {
     }
 })
 
+// Change color of Arrows on Feature hover
+
+desktopFeatures.addEventListener('mouseover', function () {
+    
+    if(!main.classList.contains('dark-background')) {
+        desktopArrow1.classList.toggle('lighten');
+    }
+    else {
+        desktopArrow1.classList.toggle('darken');
+    }
+});
+
+// Change Arrow Color back to original color
+
+desktopFeatures.addEventListener('mouseout', function () {
+    
+    if(!main.classList.contains('dark-background')) {
+        desktopArrow1.classList.toggle('lighten');
+    }
+    else {
+        desktopArrow1.classList.toggle('darken');
+    }
+});
+
+
+
+// Change color of Arrows on Company hover
+
+desktopCompany.addEventListener('mouseover', function () {
+    
+    if(!main.classList.contains('dark-background')) {
+        desktopArrow2.classList.toggle('lighten');
+    }
+    else {
+        desktopArrow2.classList.toggle('darken');
+    }
+});
+
+// Change Arrow Color back to original color
+
+desktopCompany.addEventListener('mouseout', function () {
+    
+    if(!main.classList.contains('dark-background')) {
+        desktopArrow2.classList.toggle('lighten');
+    }
+    else {
+        desktopArrow2.classList.toggle('darken');
+    }
+});
+
+
+
 
 // Reveals the submenu for Features Desktop
 
@@ -108,7 +160,6 @@ desktopFeatures.addEventListener('click', function() {
   
 
 
-
 // Reveals the submenu for Company Desktop
 
 desktopCompany.addEventListener('click', function() {
@@ -122,7 +173,7 @@ desktopCompany.addEventListener('click', function() {
       companySubmenuDesktop.classList.remove('show');
       desktopArrow2.classList.toggle('active');
     }
-})
+});
 
   
 // Dark Mode Toggle
