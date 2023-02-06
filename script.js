@@ -144,6 +144,9 @@ const headerArrows = document.querySelectorAll('.header-arrow');
 
 const submenuOptions = document.querySelectorAll('.submenu-option');
 
+const toggleSwitch = document.querySelector('.switch');
+
+
 window.onload = function() {
   checkbox.checked = false;
 };
@@ -158,7 +161,7 @@ checkbox.addEventListener('change', function() {
   companySubmenuDesktop.classList.toggle('dark-background');
   desktopArrow1.classList.toggle('dark');
   desktopArrow2.classList.toggle('dark');
-
+  toggleSwitch.classList.toggle('gray-background');
 
   headerLinks.forEach(function(headerLink) {
     headerLink.classList.toggle('light-text');

@@ -566,6 +566,10 @@ ul {
     color: var(--mediumGray);
 }
 
+.gray-background {
+    background-color: var(--mediumGray);
+}
+
 .light-text {
     color: var(--almostWhite);
 }
@@ -652,9 +656,13 @@ ul {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--almostWhite);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     transition: transform 200ms linear;
+  }
+
+  .switch.gray-background {
+    background-color: var(--mediumGray);
   }
   
   .checkbox:checked + .label {
@@ -1111,6 +1119,17 @@ ul {
     ul > li:not(:last-child) {
         margin-bottom: 11px;
     }
+
+    .toggle-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 599px;
+        top: 2%;
+        z-index: 1;
+    }
+
 } 
 
 
@@ -1943,11 +1962,15 @@ ul {
         margin-left: -204px;
         width: 58%;
     }
+
+    .toggle-container {
+        left: 641px;
+    }
 }
 
 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Extra large devices (large laptops and desktops, 2500px and up) */
 @media only screen and (min-width: 2500px) {
     .hero-heading {
         margin-left: -458px;
