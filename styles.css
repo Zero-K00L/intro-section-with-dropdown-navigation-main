@@ -830,8 +830,7 @@ ul {
         filter:contrast(200);
     }
 
-    .header-arrow.active-dark {
-        transform:rotate(180deg);
+    .header-arrow.active.dark {
         filter:contrast(0) brightness(200%);
     }
 
@@ -925,10 +924,10 @@ ul {
         display: inline-block;
     }
 
-    .company-submenu-desktop.show-dark {
+    /*.company-submenu-desktop.show-dark {
         display: inline-block;
         background-color: var(--almostBlack);
-    }
+    } */
     
     .company-submenu-desktop > li:nth-child(2) {
         width: 71%;
@@ -1602,10 +1601,14 @@ ul {
         display: inline-block;
     }
 
-    .features-submenu-desktop.show-dark {
-        display: inline-block;
+    .features-submenu-desktop.dark-background {
         background-color: var(--almostBlack);
     }
+
+/*     .features-submenu-desktop.show-dark {
+        display: inline-block;
+        background-color: var(--almostBlack);
+    } */
 
     .submenu-option {
         width: 69%;
@@ -1665,6 +1668,10 @@ ul {
     
     .company-submenu-desktop.show {
         display: inline-block;
+    }
+
+    .company-submenu-desktop.dark-background {
+        background-color: var(--almostBlack);
     }
     
     .company-submenu-desktop > li:nth-child(2) {

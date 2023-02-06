@@ -98,11 +98,12 @@ desktopFeatures.addEventListener('click', function() {
       featuresSubmenuDesktop.classList.remove('hidden');
       if (document.querySelector(".main").classList.contains("dark-background")) {
         desktopArrow1.classList.toggle('active-dark');
-        featuresSubmenuDesktop.classList.toggle('show-dark');
+/*         featuresSubmenuDesktop.classList.toggle('show-dark'); */
       } else {
         desktopArrow1.classList.toggle('active');
-        featuresSubmenuDesktop.classList.toggle('show');
+        
       }
+      featuresSubmenuDesktop.classList.toggle('show');
     } else {
       featuresSubmenuDesktop.classList.toggle('hidden');
       featuresSubmenuDesktop.classList.remove('show');
@@ -116,6 +117,7 @@ desktopFeatures.addEventListener('click', function() {
   
 
 
+
 // Reveals the submenu for Company Desktop
 
 desktopCompany.addEventListener('click', function() {
@@ -123,11 +125,12 @@ desktopCompany.addEventListener('click', function() {
       companySubmenuDesktop.classList.remove('hidden');
       if (document.querySelector('.main').classList.contains('dark-background')) {
         desktopArrow2.classList.toggle('active-dark');
-        companySubmenuDesktop.classList.toggle('show-dark');
+/*         companySubmenuDesktop.classList.toggle('show-dark'); */
       } else {
         desktopArrow2.classList.toggle('active');
-        companySubmenuDesktop.classList.toggle('show');
+        
       }
+      companySubmenuDesktop.classList.toggle('show');
 
     }
     else {
@@ -140,80 +143,9 @@ desktopCompany.addEventListener('click', function() {
       }
     }
 })
+
   
-
-
-
-
-/* desktopCompany.addEventListener('click', function() {
-    if (!companySubmenuDesktop.classList.contains('show')) {
-        companySubmenuDesktop.classList.remove('hidden');
-        desktopArrow2.classList.toggle('active');
-        companySubmenuDesktop.classList.toggle('show');
-    }
-    else {
-        companySubmenuDesktop.classList.toggle('hidden');
-        companySubmenuDesktop.classList.remove('show');
-        desktopArrow2.classList.toggle("active");
-    }
-}) */
-
-
-
 // Dark Mode Toggle
-
-/* const checkbox = document.getElementById('checkbox');
-const body = document.querySelector('body');
-const main = document.querySelector('main');
-const header = document.querySelector('.hero-heading');
-const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
-const logo = document.querySelector('.header-logo .logo-img');
-
-
-checkbox.addEventListener('change', function() {
-    body.classList.toggle('dark-background');
-    main.classList.toggle('dark-background');
-    header.classList.toggle('light-text');
-    overlay.classList.toggle('dark-background');
-    logo.setAttribute("xlink:href", "images/logo-dark.svg");
-
-    hamburgerMenus.forEach(function(hamburgerMenu) {
-    hamburgerMenu.classList.toggle('light-background');
-    });
-}); */
-
-
-/* const checkbox = document.getElementById('checkbox');
-const body = document.querySelector('body');
-const main = document.querySelector('main');
-const header = document.querySelector('.hero-heading');
-const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
-const logo = document.querySelector('.header-logo .logo-img');
-
-const heroImgMobile = document.querySelector('.img-container-mobile');
-const heroImgDesktop = document.querySelector('.img-container-desktop');
-
-const originalLogo = logo.getAttribute("xlink:href");
-
-checkbox.addEventListener('change', function() {
-    body.classList.toggle('dark-background');
-    main.classList.toggle('dark-background');
-    header.classList.toggle('light-text');
-    overlay.classList.toggle('dark-background');
-
-    if (logo.getAttribute("xlink:href") === "images/logo-dark.svg") {
-        logo.setAttribute("xlink:href", originalLogo);
-    } else {
-        logo.setAttribute("xlink:href", "images/logo-dark.svg");
-    }
-
-    hamburgerMenus.forEach(function(hamburgerMenu) {
-    hamburgerMenu.classList.toggle('light-background');
-    });
-}); */
-
-
-
 
 const checkbox = document.getElementById('checkbox');
 const body = document.querySelector('body');
@@ -242,7 +174,11 @@ checkbox.addEventListener('change', function() {
   header.classList.toggle('light-text');
   overlay.classList.toggle('dark-background');
   heroBtn.classList.toggle('.light-button');
-  
+  featuresSubmenuDesktop.classList.toggle('dark-background');
+  companySubmenuDesktop.classList.toggle('dark-background');
+    
+
+
   headerLinks.forEach(function(headerLink) {
     headerLink.classList.toggle('light-text');
   })
@@ -265,33 +201,4 @@ checkbox.addEventListener('change', function() {
     hamburgerMenu.classList.toggle('light-background');
   });
 });
-
-/* checkbox.addEventListener('change', function() {
-    body.classList.toggle('dark-background');
-    main.classList.toggle('dark-background');
-    header.classList.toggle('light-text');
-    overlay.classList.toggle('dark-background');
-    heroBtn.classList.toggle('.light-button');
-
-
-    if (checkbox.checked) {
-      logo.setAttribute("xlink:href", "images/logo-dark.svg");
-      heroBtn.style.backgroundColor = "white";
-      heroBtn.style.color = "black";
-    } else {
-      logo.setAttribute("xlink:href", "images/logo.svg");
-      heroBtn.style.backgroundColor = "black";
-      heroBtn.style.color = "white";
-    }
-  
-    hamburgerMenus.forEach(function(hamburgerMenu) {
-      hamburgerMenu.classList.toggle('light-background');
-    });
-  }); */
-
-
-
-
-
-// Change Logo Color
 
