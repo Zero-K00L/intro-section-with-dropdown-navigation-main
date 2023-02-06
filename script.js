@@ -174,8 +174,13 @@ checkbox.addEventListener('change', function() {
 
   if (checkbox.checked) {
     logo.setAttribute("xlink:href", "images/logo-dark.svg");
+    heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
+    heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
+    
   } else {
     logo.setAttribute("xlink:href", "images/logo.svg");
+    heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
+    heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
   }
 
   hamburgerMenus.forEach(function(hamburgerMenu) {
