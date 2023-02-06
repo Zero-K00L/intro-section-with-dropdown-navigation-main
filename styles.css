@@ -458,6 +458,27 @@ ul {
     visibility: hidden;
 }
 
+/* animations for submenu options */
+
+.pulsate {
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+}
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+
 /* Hero Section */
 
 .img-container-mobile {

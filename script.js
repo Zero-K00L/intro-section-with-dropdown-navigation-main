@@ -175,6 +175,23 @@ desktopCompany.addEventListener('click', function() {
     }
 });
 
+// Adds pulsating effect to submenu options of Feature Menu
+
+const featureSubItems = document.querySelectorAll('.feature-subItem');
+
+featureSubItems.forEach(featureSubItem => {
+  featureSubItem.addEventListener('mouseover', function() {
+    this.previousElementSibling.classList.add('pulsate');
+  });
+
+  featureSubItem.addEventListener('mouseout', function() {
+    this.previousElementSibling.classList.remove('pulsate');
+  });
+});
+
+
+
+
   
 // Dark Mode Toggle
 
