@@ -29,7 +29,6 @@ body {
     background-color: var(--almostWhite);
 }
 
-
 .header-menu {
     position: fixed;
     height: 1.1875rem;
@@ -45,7 +44,6 @@ body {
 .header-menu-container {
     z-index: 10;
 }
-
 
 .header-menu > span {    
     display: block;
@@ -66,7 +64,6 @@ nav {
     align-items: center;
     margin-bottom: 25px;
 }
-
 
 .header-open > span:first-child {
     transform: rotate(45deg);
@@ -90,7 +87,6 @@ nav {
 .header-nav {
     display: none;
 }
-
 
 .header-links {
     display: none;
@@ -155,7 +151,6 @@ nav {
     transform: translateX(-100%);
 }
 
-
 /* links in hamburger menu */
 .header-display {       
     display: flex;
@@ -173,7 +168,6 @@ nav {
     font-size: 16px;
     line-height: 0.7;
 }
-
 
 .header-display > a:not(:last-child) {
     margin-bottom: 31.15px;
@@ -257,11 +251,9 @@ nav {
     }
 }
 
-
 .features-submenu.show {
     display: inline-block;
 }
-
 
 .features-submenu.dark {
     background-color: var(--almostBlack);
@@ -340,7 +332,6 @@ ul {
 .company-submenu > li:not(:last-child) {
     margin-bottom: 25px;
 }
-
 
 .login-container {
     display: flex;
@@ -487,7 +478,6 @@ ul {
     }
 }
 
-
 /* Hero Section */
 
 .img-container-mobile {
@@ -585,7 +575,6 @@ ul {
     left: -1px;
 }
 
-
 /* Dark Mode Styles */
 
 .dark-background {
@@ -616,13 +605,6 @@ ul {
     background-color: var(--almostWhite);
     color: var(--almostBlack);
 }
-
-/* .hero-btn:hover.light-button:hover {
-    border: 2px solid var(--almostWhite);
-    background-color: var(--almostBlack);
-    color: var(--almostWhite)
-} */
-
 
 .header-link.light-text:hover {
     color: white;
@@ -713,11 +695,6 @@ ul {
     background-color: #333;
 }
 
-/* .switch-2.gray-background {
-    background-color: #333;
-} */
-
-
 .checkbox:checked + .label {
     background-color: var(--almostBlack);
 }
@@ -770,17 +747,10 @@ ul {
 }
 
 
-
-
-
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
 
 /* Media Queries */
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {
@@ -827,13 +797,6 @@ ul {
         font-size: 20px;
     }
 } 
-
-
-
-
-
-
-
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -929,8 +892,6 @@ ul {
         filter:contrast(0) brightness(200%);
     }
 
-
-
     .header-arrow2 {
         left: 4px;
     }
@@ -969,8 +930,6 @@ ul {
         transition: transform 200ms linear;
         cursor: pointer;
     }
-
-
 
     .header-features {
         width: 60px;
@@ -1251,9 +1210,6 @@ ul {
     }
 
 } 
-
-
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -1601,12 +1557,6 @@ ul {
     }
 } 
 
-
-
-
-
-
-
 /* Very large devices (very large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {
 
@@ -1730,7 +1680,6 @@ ul {
         background-color: var(--almostWhite);
     }
 
-
     .label {
         position: relative;
         display: inline-block;
@@ -1763,8 +1712,6 @@ ul {
     .features-submenu-desktop.dark-background {
         background-color: var(--almostBlack);
     }
-
-
 
     .submenu-option {
         width: 69%;
@@ -2048,9 +1995,6 @@ ul {
         left: 9px;
     }
 
-
-
-
     .hero-content-container {
         align-items: center;
     }
@@ -2104,7 +2048,6 @@ ul {
         left: 641px;
     }
 }
-
 
 
 /* Extra large devices (large laptops and desktops, 2500px and up) */
