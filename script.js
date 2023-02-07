@@ -18,9 +18,8 @@ const companySubmenuDesktop = document.querySelector('.company-submenu-desktop')
 const desktopCompany = document.querySelector('.company-link');
 const desktopArrow2 = document.querySelector('.header-arrow2');
 
-btnHamburger.addEventListener('click', function(){
-
-    if(btnHamburger.classList.contains('header-open')){ /* close Hamburger menu */
+btnHamburger.addEventListener('click', function() {
+    if(btnHamburger.classList.contains('header-open')) {    // close Hamburger menu 
         btnHamburger.classList.remove('header-open');
         featuresSubmenu.classList.toggle('hidden');
         featuresSubmenu.classList.remove('show');
@@ -37,7 +36,7 @@ btnHamburger.addEventListener('click', function(){
             element.classList.add('fade-out2');
         });
     }
-    else {                                             /*  open Hamburger menu */
+    else {                                                // open Hamburger menu
         btnHamburger.classList.add('header-open');
         overlayAnim.classList.add('overlay');
         overlayAnim2.classList.add('overlay-2');
@@ -52,14 +51,12 @@ btnHamburger.addEventListener('click', function(){
     }
 });
 
-
 // Add sliding effect to hamburger menu components when the menu is opened
 
 btnHamburger.addEventListener("click", function() {
     overlayAnim.classList.toggle("open");
     overlayAnim2.classList.toggle("open");
 });
-
 
 // Reveals the submenu for Features Mobile
 
@@ -115,8 +112,6 @@ desktopFeatures.addEventListener('mouseout', function () {
     }
 });
 
-
-
 // Change color of Arrows on Company hover
 
 desktopCompany.addEventListener('mouseover', function () {
@@ -141,9 +136,6 @@ desktopCompany.addEventListener('mouseout', function () {
     }
 });
 
-
-
-
 // Reveals the submenu for Features Desktop
 
 desktopFeatures.addEventListener('click', function() {
@@ -159,8 +151,6 @@ desktopFeatures.addEventListener('click', function() {
     }
 });
   
-
-
 // Reveals the submenu for Company Desktop
 
 desktopCompany.addEventListener('click', function() {
@@ -181,19 +171,15 @@ desktopCompany.addEventListener('click', function() {
 const featureSubItems = document.querySelectorAll('.feature-subItem');
 
 featureSubItems.forEach(featureSubItem => {
-  featureSubItem.addEventListener('mouseover', function() {
-    this.previousElementSibling.classList.add('pulsate');
-  });
+    featureSubItem.addEventListener('mouseover', function() {
+        this.previousElementSibling.classList.add('pulsate');
+    });
 
-  featureSubItem.addEventListener('mouseout', function() {
-    this.previousElementSibling.classList.remove('pulsate');
-  });
+    featureSubItem.addEventListener('mouseout', function() {
+        this.previousElementSibling.classList.remove('pulsate');
+    });
 });
 
-
-
-
-  
 // Dark Mode Toggle
 
 const checkbox = document.getElementById('checkbox-1');
@@ -203,73 +189,65 @@ const main = document.querySelector('main');
 const header = document.querySelector('.hero-heading');
 const hamburgerMenus = document.querySelectorAll('.hamburger-menu');
 const logo = document.querySelector('.header-logo .logo-img');
-
 const heroBtn = document.querySelector('.hero-btn');
-
 const heroImgMobile = document.querySelector('.img-container-mobile');
 const heroImgDesktop = document.querySelector('.img-container-desktop');
-
 const headerLinks = document.querySelectorAll('.header-link');
 const headerArrows = document.querySelectorAll('.header-arrow');
-
 const submenuOptions = document.querySelectorAll('.submenu-option');
-
 const toggleSwitch = document.querySelector('.switch');
 const toggleSwitch2 = document.querySelector('.switch-2');
 
-
 window.onload = function() {
-  checkbox.checked = false;
-  checkbox2.checked = false;
+    checkbox.checked = false;
+    checkbox2.checked = false;
 };
 
 // Mobile Dark Toggle Button
 
 checkbox.addEventListener('change', function() {
-  body.classList.toggle('dark-background');
-  main.classList.toggle('dark-background');
-  header.classList.toggle('light-text');
-  overlay.classList.toggle('dark-background');
-  heroBtn.classList.toggle('.light-button');
-  featuresSubmenuDesktop.classList.toggle('dark-background');
-  companySubmenuDesktop.classList.toggle('dark-background');
-  desktopArrow1.classList.toggle('dark');
-  desktopArrow2.classList.toggle('dark');
-  toggleSwitch.classList.toggle('gray-background');
-  toggleSwitch2.classList.toggle('gray-background');
+    body.classList.toggle('dark-background');
+    main.classList.toggle('dark-background');
+    header.classList.toggle('light-text');
+    overlay.classList.toggle('dark-background');
+    heroBtn.classList.toggle('.light-button');
+    featuresSubmenuDesktop.classList.toggle('dark-background');
+    companySubmenuDesktop.classList.toggle('dark-background');
+    desktopArrow1.classList.toggle('dark');
+    desktopArrow2.classList.toggle('dark');
+    toggleSwitch.classList.toggle('gray-background');
+    toggleSwitch2.classList.toggle('gray-background');
+    featuresSubmenu.classList.toggle('dark');  
+    companySubmenu.classList.toggle('dark'); 
+
+    headerLinks.forEach(function(headerLink) {
+        headerLink.classList.toggle('light-text');
+    })
+
+    submenuOptions.forEach(function(submenuOption) {
+        submenuOption.classList.toggle('gray-text');
+    })
   
-  featuresSubmenu.classList.toggle('dark');  
-  companySubmenu.classList.toggle('dark'); 
+    headerArrows.forEach(function(headerArrow) {
+        headerArrow.classList.toggle('.light-filter');
+    })
 
+    if (checkbox.checked) {
+        logo.setAttribute("xlink:href", "images/logo-dark.svg");
+        heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
+        heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
 
-  headerLinks.forEach(function(headerLink) {
-    headerLink.classList.toggle('light-text');
-  })
+    } 
+    else {
+        logo.setAttribute("xlink:href", "images/logo.svg");
+        heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
+        heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
+    }
 
-  submenuOptions.forEach(function(submenuOption) {
-    submenuOption.classList.toggle('gray-text');
-  })
-  
-  headerArrows.forEach(function(headerArrow) {
-    headerArrow.classList.toggle('.light-filter');
-  })
-
-  if (checkbox.checked) {
-    logo.setAttribute("xlink:href", "images/logo-dark.svg");
-    heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
-    heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
-    
-  } else {
-    logo.setAttribute("xlink:href", "images/logo.svg");
-    heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
-    heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
-  }
-
-  hamburgerMenus.forEach(function(hamburgerMenu) {
-    hamburgerMenu.classList.toggle('light-background');
-  });
+    hamburgerMenus.forEach(function(hamburgerMenu) {
+        hamburgerMenu.classList.toggle('light-background');
+    });
 });
-
 
 // Desktop Dark Toggle Button
 
@@ -284,31 +262,32 @@ checkbox2.addEventListener('change', function() {
     desktopArrow1.classList.toggle('dark');
     desktopArrow2.classList.toggle('dark');
     toggleSwitch.classList.toggle('gray-background');
-  
+
     headerLinks.forEach(function(headerLink) {
-      headerLink.classList.toggle('light-text');
+        headerLink.classList.toggle('light-text');
     })
   
     submenuOptions.forEach(function(submenuOption) {
-      submenuOption.classList.toggle('gray-text');
+        submenuOption.classList.toggle('gray-text');
     })
     
     headerArrows.forEach(function(headerArrow) {
-      headerArrow.classList.toggle('.light-filter');
+        headerArrow.classList.toggle('.light-filter');
     })
   
     if (checkbox2.checked) {
-      logo.setAttribute("xlink:href", "images/logo-dark.svg");
-      heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
-      heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
-      
-    } else {
-      logo.setAttribute("xlink:href", "images/logo.svg");
-      heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
-      heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
+        logo.setAttribute("xlink:href", "images/logo-dark.svg");
+        heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
+        heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
+        
+    } 
+    else {
+        logo.setAttribute("xlink:href", "images/logo.svg");
+        heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
+        heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
     }
   
     hamburgerMenus.forEach(function(hamburgerMenu) {
-      hamburgerMenu.classList.toggle('light-background');
+        hamburgerMenu.classList.toggle('light-background');
     });
 });
