@@ -1,3 +1,4 @@
+// Mobile
 const btnHamburger = document.querySelector('#btnHamburger');
 const overlayAnim = document.querySelector('#overlay');
 const overlayAnim2 = document.querySelector('#overlay2');
@@ -195,7 +196,8 @@ featureSubItems.forEach(featureSubItem => {
   
 // Dark Mode Toggle
 
-const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox-1');
+const checkbox2 = document.getElementById('checkbox-2');
 const body = document.querySelector('body');
 const main = document.querySelector('main');
 const header = document.querySelector('.hero-heading');
@@ -213,10 +215,12 @@ const headerArrows = document.querySelectorAll('.header-arrow');
 const submenuOptions = document.querySelectorAll('.submenu-option');
 
 const toggleSwitch = document.querySelector('.switch');
+const toggleSwitch2 = document.querySelector('.switch-2');
 
 
 window.onload = function() {
   checkbox.checked = false;
+  checkbox2.checked = false;
 };
 
 checkbox.addEventListener('change', function() {
@@ -230,6 +234,7 @@ checkbox.addEventListener('change', function() {
   desktopArrow1.classList.toggle('dark');
   desktopArrow2.classList.toggle('dark');
   toggleSwitch.classList.toggle('gray-background');
+  toggleSwitch2.classList.toggle('gray-background');
 
   headerLinks.forEach(function(headerLink) {
     headerLink.classList.toggle('light-text');
@@ -259,3 +264,45 @@ checkbox.addEventListener('change', function() {
   });
 });
 
+
+// Desktop Dark Mode Button
+
+checkbox2.addEventListener('change', function() {
+    body.classList.toggle('dark-background');
+    main.classList.toggle('dark-background');
+    header.classList.toggle('light-text');
+    overlay.classList.toggle('dark-background');
+    heroBtn.classList.toggle('.light-button');
+    featuresSubmenuDesktop.classList.toggle('dark-background');
+    companySubmenuDesktop.classList.toggle('dark-background');
+    desktopArrow1.classList.toggle('dark');
+    desktopArrow2.classList.toggle('dark');
+    toggleSwitch.classList.toggle('gray-background');
+  
+    headerLinks.forEach(function(headerLink) {
+      headerLink.classList.toggle('light-text');
+    })
+  
+    submenuOptions.forEach(function(submenuOption) {
+      submenuOption.classList.toggle('gray-text');
+    })
+    
+    headerArrows.forEach(function(headerArrow) {
+      headerArrow.classList.toggle('.light-filter');
+    })
+  
+    if (checkbox.checked) {
+      logo.setAttribute("xlink:href", "images/logo-dark.svg");
+      heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
+      heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
+      
+    } else {
+      logo.setAttribute("xlink:href", "images/logo.svg");
+      heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
+      heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
+    }
+  
+    hamburgerMenus.forEach(function(hamburgerMenu) {
+      hamburgerMenu.classList.toggle('light-background');
+    });
+});
