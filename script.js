@@ -223,6 +223,8 @@ window.onload = function() {
   checkbox2.checked = false;
 };
 
+// Mobile Dark Toggle Button
+
 checkbox.addEventListener('change', function() {
   body.classList.toggle('dark-background');
   main.classList.toggle('dark-background');
@@ -235,6 +237,10 @@ checkbox.addEventListener('change', function() {
   desktopArrow2.classList.toggle('dark');
   toggleSwitch.classList.toggle('gray-background');
   toggleSwitch2.classList.toggle('gray-background');
+  
+  featuresSubmenu.classList.toggle('dark');  
+  companySubmenu.classList.toggle('dark'); 
+
 
   headerLinks.forEach(function(headerLink) {
     headerLink.classList.toggle('light-text');
@@ -265,7 +271,7 @@ checkbox.addEventListener('change', function() {
 });
 
 
-// Desktop Dark Mode Button
+// Desktop Dark Toggle Button
 
 checkbox2.addEventListener('change', function() {
     body.classList.toggle('dark-background');
@@ -291,7 +297,7 @@ checkbox2.addEventListener('change', function() {
       headerArrow.classList.toggle('.light-filter');
     })
   
-    if (checkbox.checked) {
+    if (checkbox2.checked) {
       logo.setAttribute("xlink:href", "images/logo-dark.svg");
       heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
       heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
