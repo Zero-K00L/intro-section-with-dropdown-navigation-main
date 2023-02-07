@@ -4,10 +4,10 @@ const overlayAnim = document.querySelector('#overlay');
 const overlayAnim2 = document.querySelector('#overlay2');
 const fadeElems = document.querySelectorAll('.has-fade');
 const fadeElems2 = document.querySelectorAll('.has-fade2');
-const featuresSelector = document.querySelector('.features-subM');  
+const featuresSelector = document.querySelector('.features-mobile-header');  
 const featuresSubmenu = document.querySelector('.features-submenu'); 
 const arrow1 = document.querySelector('.down-arrow1');
-const companySelector = document.querySelector('.company-subM');
+const companySelector = document.querySelector('.company-mobile-header');
 const companySubmenu = document.querySelector('.company-submenu');
 const arrow2 = document.querySelector('.down-arrow2');
 // Desktop
@@ -233,12 +233,14 @@ checkbox.addEventListener('change', function() {
     })
 
     if (checkbox.checked) {
+        checkbox2.checked = true;
         logo.setAttribute("xlink:href", "images/logo-dark.svg");
         heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
         heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
 
     } 
     else {
+        checkbox2.checked = false;
         logo.setAttribute("xlink:href", "images/logo.svg");
         heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
         heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
@@ -276,12 +278,14 @@ checkbox2.addEventListener('change', function() {
     })
   
     if (checkbox2.checked) {
+        checkbox.checked = true;
         logo.setAttribute("xlink:href", "images/logo-dark.svg");
         heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop-dark.png')";
         heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile-dark.png')";
         
     } 
     else {
+        chexbox.checked = false;
         logo.setAttribute("xlink:href", "images/logo.svg");
         heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
         heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
@@ -291,3 +295,5 @@ checkbox2.addEventListener('change', function() {
         hamburgerMenu.classList.toggle('light-background');
     });
 });
+
+
