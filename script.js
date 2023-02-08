@@ -285,7 +285,7 @@ checkbox2.addEventListener('change', function() {
         
     } 
     else {
-        chexbox.checked = false;
+        checkbox.checked = false;
         logo.setAttribute("xlink:href", "images/logo.svg");
         heroImgDesktop.style.backgroundImage = "url('images/image-hero-desktop.png')";
         heroImgMobile.style.backgroundImage = "url('images/image-hero-mobile.png')"
