@@ -833,7 +833,6 @@ ul {
         width: 71px;
         height: 25px;
     }
-
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -909,10 +908,6 @@ ul {
         left: 105px;
         top: 5px;
         transition: all 150ms ease-in-out;
-    }
-
-    .header-arrow1 {
-
     }
 
     .header-arrow.active {
@@ -1051,7 +1046,6 @@ ul {
         background-color: var(--almostBlack);
     }
 
-    
     .company-submenu-desktop > li:nth-child(2) {
         width: 71%;
     }
@@ -1120,7 +1114,6 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        
     }
 
     .hero-heading {
@@ -1134,6 +1127,11 @@ ul {
         text-align: left;
         letter-spacing: -1.3px;
         font-size: 52px;
+    }
+
+    .hero-span {
+        width: 100%;
+        display: inline-block;
     }
 
     .hero-desc {
@@ -1250,7 +1248,7 @@ ul {
     }
 } 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .main {
         max-width: 100vw;
@@ -1776,6 +1774,14 @@ ul {
         left: 0px;
     }
 
+    .header-arrow1 {
+        left: 117px;
+    }
+
+    .header-arrow2 {
+        left: 81px;
+    }
+
     .header-nav > li:nth-child(1) {
         width: 96px;
         margin-right: -2px;
@@ -1789,10 +1795,14 @@ ul {
         align-items: center;
     }
 
+
+        /* New hero-heading */
+
     .hero-heading {
         width: 617px;
-        margin-left: -257px;
+        margin-left: 180px;
         font-size: 93px;
+        margin-right: auto;
     }
 
     .hero-desc {
@@ -1838,21 +1848,7 @@ ul {
     }
 }
 
-/* Extra large devices (large laptops and desktops, 2500px and up) */
-@media only screen and (min-width: 2500px) {
-    .hero-heading {
-        margin-left: -458px;
-    }
-
-    .clients {
-        width: 58%;
-        margin-left: -321px;
-    }
-}
-
-
-
-/* Large devices (laptops, 2560px and up) */
+/*Extra Large devices (laptops, 2560px and up) */
 @media only screen and (min-width: 2560px) {
     .img-container-desktop {
         max-width: 757px;
@@ -1873,25 +1869,25 @@ ul {
     
     .hero-heading {
         width: 902px;
-        margin-left: -27px;
-        font-size: 135px;
+        margin-left: 175px;
         margin-bottom: 87px;
         margin-top: 159px;
+        font-size: 135px;
     }
     
     .hero-desc {
         width: 66%;
         margin-left: 182px;
-        font-size: 35px;
         margin-bottom: 87px;
+        font-size: 35px;
     }
     
     .hero-btn {
         width: 322px;
         height: 99px;
-        font-size: 35px;
-        border-radius: 31px;
         margin: 0px 0 113px 183px;
+        border-radius: 31px;
+        font-size: 35px;
     }
     
     .clients {
@@ -1972,11 +1968,11 @@ ul {
     }
     
     .header-arrow {
+        width: 13px;
         position: absolute;
         left: 173px;
         top: 24px;
         transition: all 150ms ease-in-out;
-        width: 13px;
     }
     
     .header-arrow2 {
@@ -2045,12 +2041,7 @@ ul {
     .submenu-option {
         margin-right: 10px;
     }
-    
 }
-
-
-
-
 
 /* Extra large devices (large laptops and desktops, 3840px and up) */
 @media only screen and (min-width: 3840px) {
@@ -2073,25 +2064,25 @@ ul {
 
     .hero-heading {
         width: 1538px;
-        margin-left: 161px;
-        font-size: 230px;
+        margin-left: 260px;
         margin-bottom: 131px;
         margin-top: 239px;
+        font-size: 230px;
     }
 
     .hero-desc {
         width: 74%;
         margin-left: 272px;
-        font-size: 53px;
         margin-bottom: 130px;
+        font-size: 53px;
     }
 
     .hero-btn {
         width: 484px;
         height: 149px;
-        font-size: 53px;
-        border-radius: 46px;
         margin: 0px 0 169px 275px;
+        border-radius: 46px;
+        font-size: 53px;
     }
 
     .client-1 {
@@ -2167,11 +2158,11 @@ ul {
     }
 
     .header-arrow {
+        width: 20px;
         position: absolute;
         left: 242px;
         top: 36px;
         transition: all 150ms ease-in-out;
-        width: 20px;
     }
 
     .header-arrow2 {
@@ -2182,10 +2173,10 @@ ul {
     .features-submenu-desktop {
         max-width: 338px;
         height: 458px;
-        top: 90px;
-        left: -79px;
         padding-left: 25px;
         padding-top: 64px;
+        top: 90px;
+        left: -79px;
     }
 
     .icon-1 {
@@ -2235,5 +2226,4 @@ ul {
     .submenu-option {
         margin-right: 0px;
     }
-
 }
