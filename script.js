@@ -264,6 +264,8 @@ checkbox2.addEventListener('change', function() {
     desktopArrow1.classList.toggle('dark');
     desktopArrow2.classList.toggle('dark');
     toggleSwitch.classList.toggle('gray-background');
+    featuresSubmenu.classList.toggle('dark');  
+    companySubmenu.classList.toggle('dark'); 
 
     headerLinks.forEach(function(headerLink) {
         headerLink.classList.toggle('light-text');
