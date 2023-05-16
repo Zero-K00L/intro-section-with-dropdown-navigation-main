@@ -550,7 +550,7 @@ ul {
 
 .clients {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .client-1 {
@@ -1155,6 +1155,7 @@ ul {
         width: 50%;
         margin-left: 182px;
         margin-top: -35px;
+        justify-content: space-around;
     }
 
     .client-1 {
